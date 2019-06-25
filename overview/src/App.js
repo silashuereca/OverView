@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import NavBtn from "./components/NavBtn";
 import FormAdd from "./components/FormAdd";
-import Chart from "./components/Chart";
 
 class App extends Component {
   render() {
@@ -10,7 +9,6 @@ class App extends Component {
       <div>
         <NavBtn />
         <FormAdd />
-        <Chart />
       </div>
     );
   }
