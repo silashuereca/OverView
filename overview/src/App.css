@@ -17,13 +17,16 @@
 /* Form Pannel  */
 
 .formPannel-container {
-  position: fixed;
-  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
   height: 100vh;
   background-color: #ecf0f1;
   transition: 0.3s ease;
   z-index: 2;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  overflow-y: auto;
 }
 
 /* Close Icon */
@@ -59,6 +62,39 @@
 .close:after {
   transform: rotate(-45deg);
 }
+
+/* Form Pannel Sub Container */
+.formpannel-subContainer {
+  width: 90%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.formpannel-subContainer input {
+  padding-top: 26px;
+  width: 50%;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid green;
+  background-color: #ecf0f1;
+}
+
+.formpannel-subContainer label {
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.formpannel-subContainer button {
+  margin-top: 15px;
+  margin-left: 50px;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
 /* Add Form */
 
 .add-container {
@@ -107,9 +143,53 @@
 .addform-container button:hover {
   background-color: #2ecc71;
 }
-/* Account Bar */
-.account-bar {
-  width: 100%;
+
+/* Main data container */
+
+.data-container {
+  margin-top: 100px;
+}
+
+/* Chart Container */
+.chart-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  grid-column-gap: 10px;
+  cursor: pointer;
+}
+
+.chart-container:hover {
+  opacity: 0.8;
+}
+
+.accountName {
+  position: relative;
+  margin-top: 10px;
   height: 40px;
-  background-color: whitesmoke;
+  text-align: right;
+}
+
+.accountName p {
+  position: absolute;
+  right: 10px;
+  top: -8%;
+}
+
+.barAmount {
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+  height: 40px;
+  background-color: green;
+  text-align: right;
+}
+
+.barAmount p {
+  position: absolute;
+  right: 10px;
+  top: -8%;
+  color: white;
 }
