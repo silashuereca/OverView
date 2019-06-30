@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import "./App.css";
-import NavBtn from "./components/NavBtn";
+import CreateBarAccount from "./components/CreateBarAccount";
 
 class App extends Component {
   state = {
+    // adding in the accountName form and progress bar
     account: "",
     amount: "",
     key: "",
+    // adding in a from panel to help replace other objects with the same account name
+    accountName: "",
+    paid: "",
 
     items: []
   };
@@ -80,7 +84,10 @@ class App extends Component {
             <button type="submit">Add</button>
           </form>
         </div>
-        <NavBtn entries={this.state.items} deleteAccount={this.deleteAccount} />
+        <CreateBarAccount
+          entries={this.state.items}
+          deleteAccount={this.deleteAccount}
+        />
       </div>
     );
   }
