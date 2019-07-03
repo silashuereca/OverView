@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Chart from "./Chart";
-import FormPanel from "./FormPanel";
 
 class CreateBarAccount extends Component {
   state = {
@@ -72,22 +71,6 @@ class CreateBarAccount extends Component {
 
     return (
       <div>
-        {/* navigation icon */}
-        <div className="navbtn" onClick={this.handleClick}>
-          <div className="bar" />
-          <div className="bar" />
-          <div className="bar" />
-        </div>
-        {/* form pannel */}
-        <div
-          className="formPannel-container"
-          style={{ left: `${this.state.left}px` }}
-        >
-          {/* Close icon when form panel is open  */}
-          <div className="close" onClick={this.closeClick} />
-
-          {/* Form inside navigation panel */}
-          
         <Chart accountEntry={accountEntry} />
       </div>
     );
