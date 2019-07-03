@@ -16,20 +16,13 @@ class App extends Component {
   };
 
   deleteAccount = key => {
-    let yesOrNo = prompt(
-      "Are you sure you want to delete this account? Type 'Yes' to delete the account or type 'No' if you do not wish to delete this account. This action cannot be undone."
-    ).toLowerCase();
+    const filterItems = this.state.items.filter(item => {
+      return item.key !== key;
+    });
 
-    if (yesOrNo === "yes") {
-      const filterItems = this.state.items.filter(item => {
-        return item.key !== key;
-      });
-      this.setState({
-        items: filterItems
-      });
-    } else if (yesOrNo === "") {
-      return;
-    }
+    this.setState({
+      items: filterItems
+    });
   };
 
   // changing the state's account, amount, key values
@@ -69,16 +62,16 @@ class App extends Component {
           <form className="addform-container">
             <label>Account Name</label>
             <input
-              type="text"
               name="account"
               className="account"
+              value={this.state.account}
               onChange={this.handleChange}
             />
             <label>Amount</label>
             <input
-              type="text"
               name="amount"
               className="amount"
+              value={this.state.amount}
               onChange={this.handleChange}
             />
             <button type="submit">Add</button>
